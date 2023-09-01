@@ -1,5 +1,7 @@
 # TCP retransmission timeout issue
 
+Github issue https://github.com/projectcalico/calico/issues/7983
+
 This repository contains a simple client/server application that can be used to reproduce the following issue:
 
 If a server pod is abruptly deleted it should cause the client to receive a `TCP RST` message, when the client attempts to send data to the server that was previously terminated.
