@@ -8,8 +8,8 @@ If a server pod is abruptly deleted it should cause the client to receive a `TCP
 In certain conditions, demonstrated by the example in this repository, this does not happen.
 Instead, a long sequence of TCP retransmits will begin and the client will block for 15 minutes until TCP retransmission timeout is reached.
 
-NOTE: This issue seems to be specific to certain deployments of Kubernetes, possibly related to Calico implementation.
-Clusters with Kindnet or Flannel CNI plugins do not seem to exhibit the issue.
+NOTE: This issue seems to be specific to certain deployments of Kubernetes, possibly related to Calico CNI implementation.
+Clusters with Kindnet, Flannel or Cilium do not seem to exhibit the issue.
 
 
 ## Preconditions
